@@ -2,21 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Collaborative Whiteboard</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        #toolbar { position: fixed; top: 10px; left: 10px; z-index: 10; background: white; padding: 5px; border-radius: 5px; }
-        canvas { display: block; background: white; }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Collaborative Whiteboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="toolbar">
-        <button onclick="clearCanvas()">Clear</button>
-        <button onclick="undo()">Undo</button>
-    </div>
-    <canvas id="board"></canvas>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="script.js"></script>
+  <div id="toolbar">
+    <button onclick="addSlide()">➕</button>
+    <button onclick="prevSlide()">⬅️</button>
+    <button onclick="nextSlide()">➡️</button>
+    <button onclick="undo()">↩️</button>
+    <button onclick="clearCanvas()">🧽</button>
+    <button onclick="saveImage()">💾</button>
+    <span id="slideIndicator">Slide 1 di 1</span>
+  </div>
+  <div id="container">
+    <canvas id="canvas"></canvas>
+    <div id="thumbnails"></div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #fff;
+}
+#toolbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #eee;
+  gap: 10px;
+}
+#container {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+#canvas {
+  flex: 1;
+  border: 1px solid #ccc;
+  cursor: crosshair;
+}
+#thumbnails {
+  width: 120px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  border-left: 1px solid #ccc;
+  padding: 5px;
+}
+.thumb {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.thumb.active {
+  border-color: blue;
+}
